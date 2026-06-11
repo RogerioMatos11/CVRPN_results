@@ -59,14 +59,19 @@ a:hover {
     white-space: nowrap;
 } */
 /* Classe especial corrigida para deixar o nome do conjunto na vertical */
+/* Classe especial ajustada para manter estreito e com leitura de baixo para cima */
 .txt-vertical {
-    writing-mode: vertical-rl; /* Mudamos de lr para rl para o texto ler de cima para baixo naturalmente sem precisar rotacionar */
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
     font-weight: bold;
     font-size: 13px;
     background: #fafafa; 
-    padding: 12px 6px;       /* Um leve ajuste no preenchimento para estabilizar */
+    padding: 10px 4px;
     white-space: nowrap;
-    width: auto;             /* Deixamos o navegador calcular a largura mínima necessária */
+    
+    /* O SEGREDO AQUI: Força a coluna a ser o mais estreita possível sem quebrar as bordas */
+    width: 1%; 
+    max-width: 20px; 
 }
 </style>
 </head>
