@@ -48,7 +48,7 @@ a:hover {
 }
 
 /* Classe especial para deixar o nome do conjunto na vertical */
-.txt-vertical {
+/* .txt-vertical {
     writing-mode: vertical-lr;
     transform: rotate(180deg);
     font-weight: bold;
@@ -57,6 +57,16 @@ a:hover {
     padding: 10px 4px;
     width: 1px;
     white-space: nowrap;
+} */
+/* Classe especial corrigida para deixar o nome do conjunto na vertical */
+.txt-vertical {
+    writing-mode: vertical-rl; /* Mudamos de lr para rl para o texto ler de cima para baixo naturalmente sem precisar rotacionar */
+    font-weight: bold;
+    font-size: 13px;
+    background: #fafafa; 
+    padding: 12px 6px;       /* Um leve ajuste no preenchimento para estabilizar */
+    white-space: nowrap;
+    width: auto;             /* Deixamos o navegador calcular a largura mínima necessária */
 }
 </style>
 </head>
