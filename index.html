@@ -12,17 +12,16 @@ body {
 
 table {
     border-collapse: collapse;
-    /* 1. Faz a tabela ocupar apenas o espaço necessário, sem esticar */
     width: 80%; 
-    /* Opcional: centraliza a tabela na tela. Se preferir na esquerda, remova a linha abaixo */
     margin: 0 auto; 
 }
 
 th, td {
     border: 1px solid #ccc;
-    /* 2. Reduz o espaço interno (6px em cima/baixo e 12px nas laterais) */
     padding: 3px 12px;
     text-align: center;
+    /* Garante o alinhamento perfeitamente centralizado na vertical */
+    vertical-align: middle; 
 }
 
 th {
@@ -37,6 +36,15 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+/* Classe especial para deixar o nome do conjunto na vertical */
+.txt-vertical {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    font-weight: bold;
+    background: #fafafa; /* Um leve fundo cinza para destacar o bloco do conjunto */
+    padding: 10px 5px;
+}
 </style>
 </head>
 
@@ -47,7 +55,7 @@ a:hover {
 <table>
 <thead>
     <tr>
-        <th rowspan="2" colspan="1">Instance</th>
+        <th rowspan="2" colspan="2">Instance</th>
         <th colspan="3">Solution</th>
     </tr>
     <tr>
@@ -59,6 +67,7 @@ a:hover {
 
 <tbody>
     <tr>
+        <td rowspan="3" class="txt-vertical">Set F</td>
         <td><a href="Instance/Set_F/instances/F-n45-k4.dat">F-n45-k4.dat</a></td>
         <td>679.107</td>
         <td><a href="Solutions/Set_F/Files/F-n45-k4.txt">F-n45-k4.txt</a></td>
@@ -78,11 +87,11 @@ a:hover {
     </tr>
     
     <tr style="height: 10px;">
-        <td colspan="4" style="border: none;"></td> 
+        <td colspan="5" style="border: none;"></td> 
     </tr>
     
     <tr>
-        <td><a href="Instance/Set_F/instances/F-n135-k7.dat">F-n135-k7.dat</a></td>
+        <td colspan="2"><a href="Instance/Set_F/instances/F-n135-k7.dat">F-n135-k7.dat</a></td>
         <td>1,067.847</td>
         <td><a href="Solutions/Set_F/Files/F-n135-k7.txt">F-n135-k7.txt</a></td>
         <td><a href="Solutions/Set_F/Figures/F-n135-k7.pdf">F-n135-k7.pdf</a></td>
